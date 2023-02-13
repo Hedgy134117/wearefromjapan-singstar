@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authentication</title>
+</head>
+
+<body>
+    <form id="signup-form">
+        <h1>sign up</h1>
+
+        <label for="username">username</label>
+        <input type="text" name="username" required>
+
+        <label for="password">password</label>
+        <input type="password" name="password" required>
+
+        <button type="submit">sign up</button>
+    </form>
+
+    <form id="signin-form">
+        <h1>sign in</h1>
+
+        <label for="username">username</label>
+        <input type="text" name="username" required>
+
+        <label for="password">password</label>
+        <input type="password" name="password" required>
+
+        <button type="submit">sign in</button>
+    </form>
+
+    <div id="signed-in" style="display: none;">
+        <h1>welcome back</h1>
+        <p></p>
+        <button>sign out</button>
+    </div>
+
+    <!-- <script src="./firebase.js" type="module"></script> -->
+    <script src="./auth.js" type="module"></script>
+</body>
+
+</html>

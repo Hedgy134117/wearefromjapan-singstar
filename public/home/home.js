@@ -22,12 +22,16 @@ async function loadAllMatches() {
         let userA = await getUser(data.userA);
         let userB = await getUser(data.userB);
         let matchDOM = `
-        <a href="../match?id=${document.id}">
-            <div class="match">
-                <p style="background-color: ${userA.color}">${userA.username}</p>
-                <p style="background-color: ${userB.color}">${userB.username}</p>
-            </div>
-        </a>
+        <div class="match">
+            <a href="../match?id=${document.id}">
+                <div style="background-color: ${userA.color}">
+                    <p>${userA.username}</p>
+                </div>
+                <div style="background-color: ${userB.color}">
+                    <p>${userB.username}</p>
+                </div>
+            </a>
+        </div>
         `;
         allMatchesDOM.insertAdjacentHTML("afterbegin", matchDOM);
     });

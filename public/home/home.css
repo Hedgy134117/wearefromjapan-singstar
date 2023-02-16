@@ -13,35 +13,57 @@ a {
 }
 
 .matches {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: stretch;
+    align-items: stretch;
     height: 100%;
     width: 100%;
 }
 
-.matches a {
-    width: 50%;
+.match {
+    border: 1em solid black;
+    background-color: white;
+    display: flex;
 }
 
-.match {
-    background-color: #FFFFFF;
-    border: 1em solid #000000;
+.match a {
+    flex-grow: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: stretch;
+    align-items: stretch;
+}
 
+.match div {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    align-items: center;
 }
 
 .match p {
     margin: 0;
-    padding: 2em;
-    color: #FFFFFF;
+    padding: 1em;
+    font-size: 2em;
+    color: white;
     text-transform: uppercase;
     font-weight: bold;
-    text-align: center;
-    
-    width: 50%;
-    flex-grow: 1;
+}
+
+@media screen and (max-width: 1442px) {
+    .matches {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 945px) {
+    .matches {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 503px) {
+    .match p {
+        font-size: 1em;
+    }
 }
